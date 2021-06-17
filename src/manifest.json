@@ -1,0 +1,24 @@
+{
+    "manifest_version": 2,
+    "name": "Websites Enhancer",
+    "version": "1.0",
+    "author": "StyleShit",
+    "homepage_url": "https://evyatar.tk",
+
+    "description": "Enhance the web with simple JavaScript code.",
+
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [ 
+                "index.js"
+            ]
+        }
+    ],
+
+    "permissions": [
+        "<all_urls>"
+    ]
+}
