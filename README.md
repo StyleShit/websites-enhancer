@@ -28,7 +28,7 @@ export default class Example extends ComponentBase
     getConditions()
     {
         this.requireElement( '.my-selector' );
-        this.requireURL( /^https:\/\/www\.github\.com/i );
+        this.requireURL( /^https:\/\/github\.com/i );
 
         return true;
     }
