@@ -102,3 +102,12 @@ The actual code to run when the enhancer is being executed.
 ```JS
 @return {void}
 ```
+
+### `Component.find( selector )`
+Find an retrieve an element in the page using a CSS selector.
+
+```JS
+@param {string} selector
+
+@return {HTMLElement|null}
+```
