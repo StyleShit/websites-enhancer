@@ -24,17 +24,11 @@ export default class EnhancerModule
     registerComponents()
     {
         Object.entries( this.components ).forEach( ( [ id, component ] ) => {
-            try
-            {
-                if ( component.getConditions() )
-                {
-                    component.run();
-                }
-            }
+            component.executeConditions();
 
-            catch( e )
+            if ( component.shouldRun )
             {
-                // Do nothing.
+                component.run();
             }
         } );
     }

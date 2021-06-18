@@ -1,6 +1,14 @@
 export default class ComponentBase
 {
     /**
+     * Determine if the enhancer should run.
+     * 
+     * @type {boolean}
+     * @public
+     */
+    shouldRun = true;
+    
+    /**
      * Retrieve the condition to run the enhancer component.
      * Should be implemented in the components that extend this class and always return a value.
      * 
@@ -9,6 +17,20 @@ export default class ComponentBase
     getConditions()
     {
         return true;
+    }
+
+    /**
+     * Execute the conditions & requirements to run the enhancer.
+     * 
+     * @return {void}
+     */
+    executeConditions()
+    {
+        this.shouldRun = true;
+
+        const condition = this.getConditions();
+
+        this.shouldRun = this.shouldRun && condition;
     }
 
     /**
@@ -24,7 +46,7 @@ export default class ComponentBase
 
         if ( ! URL.match( regex ) )
         {
-            throw `The current URL doesn't match the pattern ( ${ regex } )`;
+            this.shouldRun = false;
         }
     }
 
@@ -41,7 +63,7 @@ export default class ComponentBase
 
         if ( ! element )
         {
-            throw `A required element not found ( ${ selector } )`;
+            this.shouldRun = false;
         }
     }
 
@@ -50,7 +72,7 @@ export default class ComponentBase
      * 
      * @param {string} selector - CSS selector.
      * 
-     * @returns {HTMLElement|null}
+     * @return {HTMLElement|null}
      */
     find( selector )
     {
