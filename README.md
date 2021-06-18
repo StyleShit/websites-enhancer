@@ -63,7 +63,7 @@ export default class EnhancerModule
 }
 ```
 
-# Available methods:
+## Available methods:
 
 ### `Component.getConditions()`
 Determines if the enhancer should run.
