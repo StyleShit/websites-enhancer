@@ -95,3 +95,10 @@ Should be execute inside the `getConditions()` method.
 
 @return {boolean}
 ```
+
+### `Component.run()`
+The actual code to run when the enhancer is being executed.
+
+```JS
+@return {void}
+```
