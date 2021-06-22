@@ -75,9 +75,9 @@ Should always return a value.
 ```
 
 ### `Component.requireElement( selector )`
-Requires the page to have an element which matches the `selector` in order ro run.
+Requires the page to have an element that matches the `selector` in order ro run.
 
-Should be execute inside the `getConditions()` method.
+Should be executed inside the `getConditions()` method.
 
 ```JS
 @param {string} selector
@@ -88,7 +88,7 @@ Should be execute inside the `getConditions()` method.
 ### `Component.requireURL( regex )`
 Requires the page to have a URL that matches the `regex` in order ro run.
 
-Should be execute inside the `getConditions()` method.
+Should be executed inside the `getConditions()` method.
 
 ```JS
 @param {object} regex
@@ -104,7 +104,7 @@ The actual code to run when the enhancer is being executed.
 ```
 
 ### `Component.find( selector )`
-Find an retrieve an element in the page using a CSS selector.
+Retrieve an element from the page using a CSS selector.
 
 ```JS
 @param {string} selector
