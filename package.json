@@ -14,12 +14,14 @@
   },
   "scripts": {
     "dev": "parcel src/manifest.json --host localhost --target webext-dev",
-    "build": "parcel build src/manifest.json --target webext-prod"
+    "build": "parcel build src/manifest.json --target webext-prod",
+    "lint": "eslint ./src"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@parcel/config-webextension": "next",
+    "eslint": "^8.11.0",
     "parcel": "next"
   }
 }
